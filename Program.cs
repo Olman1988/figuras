@@ -4,7 +4,7 @@ namespace figuras2
 {
     class Figura
     {
-        int lado, area, h,altura;
+        int lado, area, h,altura,radio;
 
         static void Main(string[] args)
         {
@@ -12,6 +12,8 @@ namespace figuras2
             cuadrado2.cuadrado(cuadrado2);
             Figura triangulo = new Figura();
             triangulo.triangulo(triangulo);
+            Figura circulo = new Figura();
+            circulo.circulo(circulo);
         }
         public void cuadrado(Figura cuadrado) {
             
@@ -30,6 +32,15 @@ namespace figuras2
             triangulo.altura = Int32.Parse(Console.ReadLine());
             triangulo.area = (triangulo.h * triangulo.altura)/2;
             Console.WriteLine("El area del triangulo es: " + triangulo.area);
+            Console.ReadLine();
+        }
+        public void circulo(Figura circulo) {
+                
+            Console.WriteLine("Digite el radio del circulo");
+            circulo.radio = Int32.Parse(Console.ReadLine());
+            circulo.area = (int)(Math.PI * (radio * radio));
+            
+            Console.WriteLine("El area del circulo es: " + circulo.area);
             Console.ReadLine();
         }
     }
