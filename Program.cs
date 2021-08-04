@@ -4,7 +4,7 @@ namespace figuras2
 {
     class Figura
     {
-        int lado, area, h,altura,radio;
+        int lado, area, b,altura,radio;
 
         static void Main(string[] args)
         {
@@ -14,6 +14,8 @@ namespace figuras2
             triangulo.triangulo(triangulo);
             Figura circulo = new Figura();
             circulo.circulo(circulo);
+            Figura rectangulo = new Figura();
+            rectangulo.rectangulo(rectangulo);
         }
         public void cuadrado(Figura cuadrado) {
             
@@ -27,10 +29,10 @@ namespace figuras2
         {
 
             Console.WriteLine("Digite la base del triangulo");
-            triangulo.h = Int32.Parse(Console.ReadLine());
+            triangulo.b = Int32.Parse(Console.ReadLine());
             Console.WriteLine("Digite la altura del triangulo");
             triangulo.altura = Int32.Parse(Console.ReadLine());
-            triangulo.area = (triangulo.h * triangulo.altura)/2;
+            triangulo.area = (triangulo.b * triangulo.altura)/2;
             Console.WriteLine("El area del triangulo es: " + triangulo.area);
             Console.ReadLine();
         }
@@ -41,6 +43,18 @@ namespace figuras2
             circulo.area = (int)(Math.PI * (radio * radio));
             
             Console.WriteLine("El area del circulo es: " + circulo.area);
+            Console.ReadLine();
+        }
+        public void rectangulo(Figura rectangulo)
+        {
+
+            Console.WriteLine("Digite la base del rectángulo");
+            rectangulo.b = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite la altura del rectángulo");
+            rectangulo.altura = Int32.Parse(Console.ReadLine());
+            rectangulo.area = rectangulo.b * rectangulo.altura;
+            Console.WriteLine("El area del rectangulo es: " + rectangulo.area);
             Console.ReadLine();
         }
     }
